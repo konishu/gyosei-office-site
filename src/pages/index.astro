@@ -1,0 +1,70 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import ContactCTA from '../components/ContactCTA.astro';
+const base = import.meta.env.BASE_URL;
+---
+<BaseLayout title="○○行政書士事務所｜○○市の相続・許認可・法人設立（仮）">
+  <section class="border-b border-[var(--line)] bg-[linear-gradient(120deg,#fbfaf7_0%,#f0f4f1_100%)]">
+    <div class="container-site grid gap-10 py-16 lg:grid-cols-[1.2fr_0.8fr] lg:py-24">
+      <div>
+        <span class="inline-flex rounded-full border border-[var(--line)] bg-white px-3 py-1.5 text-xs font-semibold text-[var(--muted)]">○○市・△△市を中心に対応（仮）</span>
+        <h1 class="mt-6 text-4xl font-bold leading-tight tracking-tight sm:text-5xl">難しい手続きを、<br />わかりやすく、丁寧に。</h1>
+        <p class="mt-6 max-w-2xl text-base leading-8 text-[var(--muted)]">相続・遺言、各種許認可、法人設立など。役所への申請や書類作成で「何から始めればいい？」と感じたときに、気軽に相談できる行政書士事務所を目指します。</p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#services" class="rounded-xl bg-[var(--brand)] px-5 py-3 font-bold text-white no-underline">対応業務を見る</a>
+          <a href={`${base}contact/`} class="rounded-xl border border-[var(--line)] bg-white px-5 py-3 font-semibold no-underline">相談方法を見る</a>
+        </div>
+      </div>
+      <aside class="rounded-3xl border border-[var(--line)] bg-white p-6 lg:self-end">
+        <p class="text-xs font-semibold tracking-[0.16em] text-[var(--accent)]">DEMO SITE</p>
+        <h2 class="mt-2 text-xl font-bold">開業準備中のモックサイトです</h2>
+        <ul class="mt-4 space-y-3 text-sm leading-6 text-[var(--muted)]">
+          <li>・電話番号、メールアドレス、顔写真は未掲載</li>
+          <li>・業務内容や地域名はすべて仮設定</li>
+          <li>・お問い合わせフォームは送信されません</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <section id="services" class="container-site py-16">
+    <p class="text-xs font-semibold tracking-[0.18em] text-[var(--muted)]">SERVICES</p>
+    <h2 class="mt-2 text-3xl font-bold">こんな手続きをお手伝いします</h2>
+    <p class="mt-3 max-w-2xl text-sm leading-7 text-[var(--muted)]">本番では、お父様が実際に力を入れたい業務に絞って内容を深掘りします。サービス別ページを用意することで、検索・AI検索の双方から内容を理解しやすくします。</p>
+    <div class="mt-8 grid gap-4 md:grid-cols-3">
+      <ServiceCard icon="📜" title="相続・遺言" description="遺言書作成支援、遺産分割協議書、相続関係の書類作成など。" href={`${base}services/inheritance/`} />
+      <ServiceCard icon="🏢" title="許認可・届出" description="建設業、古物商など、事業に必要となる行政手続きの支援。" href={`${base}services/permits/`} />
+      <ServiceCard icon="🤝" title="会社・法人設立" description="定款作成など、法人設立時の書類作成・行政手続きをサポート。" href={`${base}services/company/`} />
+    </div>
+  </section>
+
+  <section id="about" class="border-y border-[var(--line)] bg-white py-16">
+    <div class="container-site grid gap-8 md:grid-cols-[0.8fr_1.2fr] md:items-center">
+      <div class="flex min-h-64 items-center justify-center rounded-3xl bg-[var(--brand-soft)] text-center text-sm text-[var(--muted)]">プロフィール写真<br />（本番時に掲載予定）</div>
+      <div>
+        <p class="text-xs font-semibold tracking-[0.18em] text-[var(--muted)]">ABOUT</p>
+        <h2 class="mt-2 text-3xl font-bold">相談しやすい行政書士を目指して</h2>
+        <p class="mt-5 text-sm leading-8 text-[var(--muted)]">はじめまして。行政書士の○○ ○○です。長年の社会人経験を活かし、難しく感じやすい行政手続きについて、一つひとつ丁寧にご説明することを大切にしています。</p>
+        <p class="mt-3 text-sm leading-8 text-[var(--muted)]">「こんなことを聞いてもいいのかな」という段階でも構いません。地域の皆さまにとって、最初に相談できる身近な窓口でありたいと考えています。</p>
+        <dl class="mt-6 grid grid-cols-[auto_1fr] gap-x-5 gap-y-3 text-sm">
+          <dt class="font-semibold">行政書士</dt><dd class="text-[var(--muted)]">○○ ○○</dd>
+          <dt class="font-semibold">所属</dt><dd class="text-[var(--muted)]">○○県行政書士会（仮）</dd>
+          <dt class="font-semibold">所在地</dt><dd class="text-[var(--muted)]">○○県○○市（仮）</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="container-site py-16">
+    <p class="text-xs font-semibold tracking-[0.18em] text-[var(--muted)]">FAQ</p>
+    <h2 class="mt-2 text-3xl font-bold">よくあるご質問</h2>
+    <div class="mt-7 divide-y divide-[var(--line)] border-y border-[var(--line)]">
+      <details class="py-5"><summary class="cursor-pointer font-bold">まだ依頼するか決めていなくても相談できますか？</summary><p class="mt-3 text-sm leading-7 text-[var(--muted)]">はい。本番サイトでは、まず状況を整理する段階から相談できる案内を予定しています。</p></details>
+      <details class="py-5"><summary class="cursor-pointer font-bold">行政書士に相続登記を依頼できますか？</summary><p class="mt-3 text-sm leading-7 text-[var(--muted)]">相続登記は司法書士の業務です。行政書士が対応できる遺産分割協議書等の書類作成と、必要に応じた他士業との連携を分かりやすく案内する想定です。</p></details>
+      <details class="py-5"><summary class="cursor-pointer font-bold">オンラインでも相談できますか？</summary><p class="mt-3 text-sm leading-7 text-[var(--muted)]">対応方法は開業時に決定します。Webフォーム・LINE・オンライン面談などの導入候補を想定しています。</p></details>
+    </div>
+  </section>
+
+  <ContactCTA />
+</BaseLayout>
