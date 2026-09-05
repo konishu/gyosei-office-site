@@ -1,0 +1,38 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="お問い合わせ｜○○行政書士事務所（デモ）" description="○○行政書士事務所のお問い合わせ方法を案内するデモページです。">
+  <section class="container-site py-16">
+    <p class="text-xs font-semibold tracking-[0.18em] text-[var(--muted)]">CONTACT</p>
+    <h1 class="mt-3 text-4xl font-bold">お問い合わせ</h1>
+    <p class="mt-5 max-w-2xl text-sm leading-7 text-[var(--muted)]">現在はデモのため、入力内容は送信されません。本番ではCloudflare側でフォーム処理とBot対策を実装し、LINE公式アカウントへの導線も追加する想定です。</p>
+
+    <div class="mt-10 grid gap-6 lg:grid-cols-[1fr_0.8fr]">
+      <form id="demo-form" class="rounded-2xl border border-[var(--line)] bg-white p-6" novalidate>
+        <div class="grid gap-5">
+          <label class="grid gap-2 text-sm font-semibold">お名前<input name="name" required class="min-h-12 rounded-xl border border-[var(--line)] bg-[var(--paper)] px-4 text-base font-normal" placeholder="山田 太郎" /></label>
+          <label class="grid gap-2 text-sm font-semibold">ご相談内容<select name="topic" class="min-h-12 rounded-xl border border-[var(--line)] bg-[var(--paper)] px-4 text-base font-normal"><option>相続・遺言</option><option>許認可・届出</option><option>会社・法人設立</option><option>その他</option></select></label>
+          <label class="grid gap-2 text-sm font-semibold">お問い合わせ内容<textarea name="message" required rows="6" class="rounded-xl border border-[var(--line)] bg-[var(--paper)] px-4 py-3 text-base font-normal" placeholder="相談したい内容を簡単にご記入ください"></textarea></label>
+          <button type="submit" class="min-h-12 rounded-xl bg-[var(--brand)] px-5 font-bold text-white">入力内容を確認する（デモ）</button>
+          <p id="form-result" aria-live="polite" class="text-sm text-[var(--muted)]">※ デモのため外部には送信されません。</p>
+        </div>
+      </form>
+      <aside class="space-y-4">
+        <div class="rounded-2xl bg-[var(--brand-soft)] p-6"><p class="text-xs font-semibold tracking-[0.16em] text-[var(--muted)]">LINE</p><h2 class="mt-2 text-xl font-bold">LINEで相談</h2><p class="mt-3 text-sm leading-7 text-[var(--muted)]">本番時に公式LINEへのQRコード・ボタンを設置できます。</p><button disabled class="mt-5 min-h-12 w-full cursor-not-allowed rounded-xl border border-[var(--line)] bg-white px-4 text-sm font-semibold text-[var(--muted)]">準備中</button></div>
+        <div class="rounded-2xl border border-[var(--line)] bg-white p-6"><h2 class="font-bold">電話・メール</h2><p class="mt-3 text-sm leading-7 text-[var(--muted)]">個人情報を含むため、モックでは非掲載です。本番公開直前に設定します。</p></div>
+      </aside>
+    </div>
+  </section>
+  <script>
+    const form = document.querySelector('#demo-form');
+    const result = document.querySelector('#form-result');
+    form?.addEventListener('submit', (event) => {
+      event.preventDefault();
+      if (!(form instanceof HTMLFormElement) || !(result instanceof HTMLElement)) return;
+      const data = new FormData(form);
+      const name = String(data.get('name') ?? '').trim();
+      const message = String(data.get('message') ?? '').trim();
+      result.textContent = name && message ? `${name}様：入力確認OKです。本番ではこの先で安全に送信します。` : 'お名前とお問い合わせ内容を入力してください。';
+    });
+  </script>
+</BaseLayout>
