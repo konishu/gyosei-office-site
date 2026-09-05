@@ -1,0 +1,16 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ContactCTA from '../../components/ContactCTA.astro';
+---
+<BaseLayout title="会社・法人設立のご相談｜○○行政書士事務所（仮）" description="会社・法人設立時の定款作成や行政手続きをサポートする行政書士事務所です。">
+  <section class="container-site py-16">
+    <p class="text-xs font-semibold tracking-[0.18em] text-[var(--muted)]">COMPANY</p>
+    <h1 class="mt-3 text-4xl font-bold">会社・法人設立のご相談</h1>
+    <p class="mt-6 max-w-3xl text-base leading-8 text-[var(--muted)]">事業を始める際の書類作成や行政手続きを整理し、スムーズなスタートを支援します。実際の取扱範囲は開業時に確定します。</p>
+    <div class="mt-10 rounded-2xl border border-[var(--line)] bg-white p-6">
+      <h2 class="text-xl font-bold">想定するサポート</h2>
+      <ul class="mt-4 space-y-3 text-sm leading-7 text-[var(--muted)]"><li>・定款作成に関する支援</li><li>・行政への許認可が必要な場合の整理</li><li>・必要に応じた司法書士・税理士等との連携案内</li></ul>
+    </div>
+  </section>
+  <ContactCTA />
+</BaseLayout>
