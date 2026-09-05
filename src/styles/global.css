@@ -19,3 +19,53 @@ html { scroll-behavior: smooth; }
 body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font-sans); }
 a { text-underline-offset: 0.2em; }
 .container-site { width: min(1120px, calc(100% - 2rem)); margin-inline: auto; }
+
+summary::-webkit-details-marker { display: none; }
+
+.accordion-panel {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  background: #fff;
+  padding: 1.25rem;
+}
+
+.accordion-summary,
+.faq-summary {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  cursor: pointer;
+  list-style: none;
+}
+
+.faq-summary {
+  font-weight: 700;
+}
+
+.accordion-indicator,
+.faq-summary::after {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 9999px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--brand);
+  font-weight: 700;
+  line-height: 1;
+  content: "+";
+}
+
+.accordion-indicator::before {
+  content: "+";
+}
+
+details[open] > .accordion-summary .accordion-indicator::before,
+details[open] > .faq-summary::after {
+  content: "−";
+}
