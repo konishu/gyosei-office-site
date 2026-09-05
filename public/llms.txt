@@ -1,0 +1,15 @@
+# ○○行政書士事務所（デモ）
+
+> ○○市・△△市を中心に、相続・遺言、許認可、会社・法人設立などの行政手続きを支援する行政書士事務所の開業準備サイトです。
+
+## Important
+- このサイトは現在デモです。
+- 氏名、住所、電話番号、メールアドレスなどは仮情報または未掲載です。
+- 実際の取扱業務・対応地域・料金は本番公開時に確定します。
+
+## Main pages
+- /gyosei-office-site/: 事務所概要と主要サービス
+- /gyosei-office-site/services/inheritance/: 相続・遺言
+- /gyosei-office-site/services/permits/: 許認可・届出
+- /gyosei-office-site/services/company/: 会社・法人設立
+- /gyosei-office-site/contact/: お問い合わせ（デモ）
