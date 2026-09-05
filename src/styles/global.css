@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif;
+}
+
+:root {
+  color-scheme: light;
+  --paper: #fbfaf7;
+  --ink: #1f2933;
+  --muted: #65707b;
+  --line: #e5e1d8;
+  --brand: #234f3d;
+  --brand-soft: #e9f1ed;
+  --accent: #aa7a35;
+}
+
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font-sans); }
+a { text-underline-offset: 0.2em; }
+.container-site { width: min(1120px, calc(100% - 2rem)); margin-inline: auto; }
