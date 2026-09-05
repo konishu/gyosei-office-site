@@ -6,13 +6,13 @@
 
 :root {
   color-scheme: light;
-  --paper: #fbfaf7;
-  --ink: #1f2933;
-  --muted: #65707b;
-  --line: #e5e1d8;
-  --brand: #234f3d;
-  --brand-soft: #e9f1ed;
-  --accent: #aa7a35;
+  --paper: #f4f4f2;
+  --ink: #1f1f1f;
+  --muted: #666666;
+  --line: #d8d8d3;
+  --brand: #2f2f2f;
+  --brand-soft: #ececeb;
+  --accent: #7a7a7a;
 }
 
 html { scroll-behavior: smooth; }
