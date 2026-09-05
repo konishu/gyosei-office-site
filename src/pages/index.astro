@@ -1,41 +1,109 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import ServiceCard from '../components/ServiceCard.astro';
 import ContactCTA from '../components/ContactCTA.astro';
 const base = import.meta.env.BASE_URL;
 ---
-<BaseLayout title="○○行政書士事務所｜○○市の相続・許認可・法人設立（仮）">
+<BaseLayout title="○○行政書士事務所｜岡山駅近くの相続・許認可・法人設立（仮）">
   <section class="border-b border-[var(--line)] bg-[linear-gradient(120deg,#fbfaf7_0%,#f0f4f1_100%)]">
-    <div class="container-site grid gap-10 py-16 lg:grid-cols-[1.2fr_0.8fr] lg:py-24">
-      <div>
-        <span class="inline-flex rounded-full border border-[var(--line)] bg-white px-3 py-1.5 text-xs font-semibold text-[var(--muted)]">○○市・△△市を中心に対応（仮）</span>
-        <h1 class="mt-6 text-4xl font-bold leading-tight tracking-tight sm:text-5xl">難しい手続きを、<br />わかりやすく、丁寧に。</h1>
-        <p class="mt-6 max-w-2xl text-base leading-8 text-[var(--muted)]">相続・遺言、各種許認可、法人設立など。役所への申請や書類作成で「何から始めればいい？」と感じたときに、気軽に相談できる行政書士事務所を目指します。</p>
-        <div class="mt-8 flex flex-wrap gap-3">
+    <div class="container-site grid items-center gap-8 py-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10 lg:py-24">
+      <div class="order-2 lg:order-1">
+        <span class="inline-flex rounded-full border border-[var(--line)] bg-white px-3 py-1.5 text-xs font-semibold text-[var(--muted)]">岡山駅近く・岡山市街エリアを中心に対応（仮）</span>
+        <h1 class="mt-5 text-4xl font-bold leading-tight tracking-tight sm:text-5xl">難しい手続きを、<br />わかりやすく、丁寧に。</h1>
+        <p class="mt-5 max-w-2xl text-base leading-8 text-[var(--muted)]">相続・遺言、各種許認可、法人設立など。役所への申請や書類作成で「何から始めればいい？」と感じたときに、気軽に相談できる行政書士事務所を目指します。</p>
+        <div class="mt-7 flex flex-wrap gap-3">
           <a href="#services" class="rounded-xl bg-[var(--brand)] px-5 py-3 font-bold text-white no-underline">対応業務を見る</a>
           <a href={`${base}contact/`} class="rounded-xl border border-[var(--line)] bg-white px-5 py-3 font-semibold no-underline">相談方法を見る</a>
         </div>
+        <div class="mt-6 rounded-2xl border border-[var(--line)] bg-white/80 p-4 text-sm leading-7 text-[var(--muted)] backdrop-blur-sm">
+          <p class="font-semibold text-[var(--ink)]">開業準備中のモックサイトです</p>
+          <p class="mt-2">電話番号・メールアドレス・顔写真は未掲載です。業務内容は仮設定を含みますが、地域イメージは「岡山駅近く・岡山市街エリア」前提で整えています。</p>
+        </div>
       </div>
-      <aside class="rounded-3xl border border-[var(--line)] bg-white p-6 lg:self-end">
-        <p class="text-xs font-semibold tracking-[0.16em] text-[var(--accent)]">DEMO SITE</p>
-        <h2 class="mt-2 text-xl font-bold">開業準備中のモックサイトです</h2>
-        <ul class="mt-4 space-y-3 text-sm leading-6 text-[var(--muted)]">
-          <li>・電話番号、メールアドレス、顔写真は未掲載</li>
-          <li>・業務内容や地域名はすべて仮設定</li>
-          <li>・お問い合わせフォームは送信されません</li>
-        </ul>
-      </aside>
+
+      <div class="order-1 lg:order-2">
+        <figure class="overflow-hidden rounded-3xl border border-[var(--line)] bg-white shadow-sm">
+          <img
+            src={`${base}images/hero-okayama-placeholder.svg`}
+            alt="岡山駅周辺の街並みをイメージしたダミーイラスト"
+            class="block aspect-[4/3] w-full object-cover"
+          />
+          <figcaption class="border-t border-[var(--line)] bg-white px-4 py-3 text-xs leading-6 text-[var(--muted)]">
+            ※ ダミー画像です。後で、岡山駅・岡山市街をイメージした実画像やイラストに差し替え予定です。
+          </figcaption>
+        </figure>
+      </div>
     </div>
   </section>
 
   <section id="services" class="container-site py-16">
     <p class="text-xs font-semibold tracking-[0.18em] text-[var(--muted)]">SERVICES</p>
     <h2 class="mt-2 text-3xl font-bold">こんな手続きをお手伝いします</h2>
-    <p class="mt-3 max-w-2xl text-sm leading-7 text-[var(--muted)]">本番では、お父様が実際に力を入れたい業務に絞って内容を深掘りします。サービス別ページを用意することで、検索・AI検索の双方から内容を理解しやすくします。</p>
-    <div class="mt-8 grid gap-4 md:grid-cols-3">
-      <ServiceCard icon="📜" title="相続・遺言" description="遺言書作成支援、遺産分割協議書、相続関係の書類作成など。" href={`${base}services/inheritance/`} />
-      <ServiceCard icon="🏢" title="許認可・届出" description="建設業、古物商など、事業に必要となる行政手続きの支援。" href={`${base}services/permits/`} />
-      <ServiceCard icon="🤝" title="会社・法人設立" description="定款作成など、法人設立時の書類作成・行政手続きをサポート。" href={`${base}services/company/`} />
+    <p class="mt-3 max-w-2xl text-sm leading-7 text-[var(--muted)]">サービス別の独立ページは作らず、このページの中で内容が分かるようにしています。タップ・クリックで詳細を開けます。</p>
+
+    <div class="mt-8 space-y-4">
+      <details class="accordion-panel" open>
+        <summary class="accordion-summary">
+          <div class="flex items-start gap-4">
+            <div class="text-2xl" aria-hidden="true">📜</div>
+            <div class="min-w-0 flex-1">
+              <h3 class="text-lg font-bold">相続・遺言</h3>
+              <p class="mt-1 text-sm leading-7 text-[var(--muted)]">遺言書作成支援、遺産分割協議書、相続関係の書類作成など。</p>
+            </div>
+          </div>
+          <span class="accordion-indicator" aria-hidden="true"></span>
+        </summary>
+        <div class="mt-4 border-t border-[var(--line)] pt-4 text-sm leading-7 text-[var(--muted)]">
+          <p>ご家族の状況を整理しながら、必要書類の準備や書類作成を丁寧にサポートする想定です。</p>
+          <ul class="mt-3 list-disc space-y-1 pl-5">
+            <li>遺言書作成のサポート</li>
+            <li>遺産分割協議書の作成支援</li>
+            <li>相続関係説明図など関連書類の作成</li>
+          </ul>
+          <p class="mt-3 text-xs">※ 相続登記そのものは司法書士の業務です。必要に応じて他士業との連携を案内する想定です。</p>
+        </div>
+      </details>
+
+      <details class="accordion-panel">
+        <summary class="accordion-summary">
+          <div class="flex items-start gap-4">
+            <div class="text-2xl" aria-hidden="true">🏢</div>
+            <div class="min-w-0 flex-1">
+              <h3 class="text-lg font-bold">許認可・届出</h3>
+              <p class="mt-1 text-sm leading-7 text-[var(--muted)]">建設業、古物商など、事業に必要となる行政手続きの支援。</p>
+            </div>
+          </div>
+          <span class="accordion-indicator" aria-hidden="true"></span>
+        </summary>
+        <div class="mt-4 border-t border-[var(--line)] pt-4 text-sm leading-7 text-[var(--muted)]">
+          <p>事業を始める際や継続する際に必要となる許認可について、申請の流れや必要書類を分かりやすくご説明する想定です。</p>
+          <ul class="mt-3 list-disc space-y-1 pl-5">
+            <li>建設業許可の申請支援</li>
+            <li>古物商許可など各種営業許可のサポート</li>
+            <li>各種届出・更新手続きの案内</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="accordion-panel">
+        <summary class="accordion-summary">
+          <div class="flex items-start gap-4">
+            <div class="text-2xl" aria-hidden="true">🤝</div>
+            <div class="min-w-0 flex-1">
+              <h3 class="text-lg font-bold">会社・法人設立</h3>
+              <p class="mt-1 text-sm leading-7 text-[var(--muted)]">定款作成など、法人設立時の書類作成・行政手続きをサポート。</p>
+            </div>
+          </div>
+          <span class="accordion-indicator" aria-hidden="true"></span>
+        </summary>
+        <div class="mt-4 border-t border-[var(--line)] pt-4 text-sm leading-7 text-[var(--muted)]">
+          <p>これから事業を始める方に向けて、法人設立に関する必要書類や手続きの整理をお手伝いする想定です。</p>
+          <ul class="mt-3 list-disc space-y-1 pl-5">
+            <li>定款作成の支援</li>
+            <li>設立前後の行政手続きの整理</li>
+            <li>事業開始時の必要書類に関するご案内</li>
+          </ul>
+        </div>
+      </details>
     </div>
   </section>
 
@@ -46,11 +114,11 @@ const base = import.meta.env.BASE_URL;
         <p class="text-xs font-semibold tracking-[0.18em] text-[var(--muted)]">ABOUT</p>
         <h2 class="mt-2 text-3xl font-bold">相談しやすい行政書士を目指して</h2>
         <p class="mt-5 text-sm leading-8 text-[var(--muted)]">はじめまして。行政書士の○○ ○○です。長年の社会人経験を活かし、難しく感じやすい行政手続きについて、一つひとつ丁寧にご説明することを大切にしています。</p>
-        <p class="mt-3 text-sm leading-8 text-[var(--muted)]">「こんなことを聞いてもいいのかな」という段階でも構いません。地域の皆さまにとって、最初に相談できる身近な窓口でありたいと考えています。</p>
+        <p class="mt-3 text-sm leading-8 text-[var(--muted)]">「こんなことを聞いてもいいのかな」という段階でも構いません。岡山市内や岡山駅周辺の皆さまにとって、最初に相談できる身近な窓口でありたいと考えています。</p>
         <dl class="mt-6 grid grid-cols-[auto_1fr] gap-x-5 gap-y-3 text-sm">
           <dt class="font-semibold">行政書士</dt><dd class="text-[var(--muted)]">○○ ○○</dd>
-          <dt class="font-semibold">所属</dt><dd class="text-[var(--muted)]">○○県行政書士会（仮）</dd>
-          <dt class="font-semibold">所在地</dt><dd class="text-[var(--muted)]">○○県○○市（仮）</dd>
+          <dt class="font-semibold">所属</dt><dd class="text-[var(--muted)]">岡山県行政書士会（仮）</dd>
+          <dt class="font-semibold">所在地</dt><dd class="text-[var(--muted)]">岡山県岡山市（仮）</dd>
         </dl>
       </div>
     </div>
@@ -60,9 +128,18 @@ const base = import.meta.env.BASE_URL;
     <p class="text-xs font-semibold tracking-[0.18em] text-[var(--muted)]">FAQ</p>
     <h2 class="mt-2 text-3xl font-bold">よくあるご質問</h2>
     <div class="mt-7 divide-y divide-[var(--line)] border-y border-[var(--line)]">
-      <details class="py-5"><summary class="cursor-pointer font-bold">まだ依頼するか決めていなくても相談できますか？</summary><p class="mt-3 text-sm leading-7 text-[var(--muted)]">はい。本番サイトでは、まず状況を整理する段階から相談できる案内を予定しています。</p></details>
-      <details class="py-5"><summary class="cursor-pointer font-bold">行政書士に相続登記を依頼できますか？</summary><p class="mt-3 text-sm leading-7 text-[var(--muted)]">相続登記は司法書士の業務です。行政書士が対応できる遺産分割協議書等の書類作成と、必要に応じた他士業との連携を分かりやすく案内する想定です。</p></details>
-      <details class="py-5"><summary class="cursor-pointer font-bold">オンラインでも相談できますか？</summary><p class="mt-3 text-sm leading-7 text-[var(--muted)]">対応方法は開業時に決定します。Webフォーム・LINE・オンライン面談などの導入候補を想定しています。</p></details>
+      <details class="py-5">
+        <summary class="faq-summary">まだ依頼するか決めていなくても相談できますか？</summary>
+        <p class="mt-3 text-sm leading-7 text-[var(--muted)]">はい。本番サイトでは、まず状況を整理する段階から相談できる案内を予定しています。</p>
+      </details>
+      <details class="py-5">
+        <summary class="faq-summary">行政書士に相続登記を依頼できますか？</summary>
+        <p class="mt-3 text-sm leading-7 text-[var(--muted)]">相続登記は司法書士の業務です。行政書士が対応できる遺産分割協議書等の書類作成と、必要に応じた他士業との連携を分かりやすく案内する想定です。</p>
+      </details>
+      <details class="py-5">
+        <summary class="faq-summary">オンラインでも相談できますか？</summary>
+        <p class="mt-3 text-sm leading-7 text-[var(--muted)]">対応方法は開業時に決定します。Webフォーム・LINE・オンライン面談などの導入候補を想定しています。</p>
+      </details>
     </div>
   </section>
 
