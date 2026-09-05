@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://konishu.github.io/gyosei-office-site/sitemap.xml
