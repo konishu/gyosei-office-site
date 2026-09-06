@@ -100,7 +100,9 @@ a { color: inherit; text-underline-offset: 0.2em; }
 .v2-hero::after {
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(20, 25, 22, 0.78) 0%, rgba(20, 25, 22, 0.52) 100%);
+  background:
+    linear-gradient(0deg, rgba(20, 25, 22, 0.88) 0%, rgba(10, 25, 22, 0.78) 48%, rgba(20, 25, 22, 0) 78%),
+    linear-gradient(90deg, rgba(20, 25, 22, 0.78) 0%, rgba(0, 243, 97, 0.282) 100%);
   content: "";
 }
 
@@ -164,7 +166,7 @@ a { color: inherit; text-underline-offset: 0.2em; }
 .v2-section { padding-block: 4.5rem; }
 .v2-section h2 {
   margin: 0;
-  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
   letter-spacing: -0.02em;
   line-height: 1.4;
 }
