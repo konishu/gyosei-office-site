@@ -1,15 +1,15 @@
 ---
 import '../styles/global.css';
 const {
-  title = '○○行政書士事務所',
-  description = '○○市を中心に、相続・遺言、許認可、法人設立などの行政手続きを丁寧にサポートする行政書士事務所です。',
+  title = '小西行政書士事務所',
+  description = '岡山市を中心に、相続・遺言、許認可、法人設立などの行政手続きを丁寧にサポートする行政書士事務所です。',
 } = Astro.props;
 const base = import.meta.env.BASE_URL;
 const canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url.origin);
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
-  name: '○○行政書士事務所',
+  name: '小西行政書士事務所',
   description,
   areaServed: ['○○市', '△△市'],
   url: canonical.toString(),
@@ -35,7 +35,7 @@ const schema = {
       <div class="container-site flex min-h-20 items-center justify-between gap-4 py-3">
         <a href={base} class="no-underline">
           <p class="text-xs tracking-[0.18em] text-[var(--muted)]">地域の身近な法律手続きパートナー</p>
-          <p class="mt-1 text-lg font-bold">○○行政書士事務所 <span class="text-xs font-normal text-[var(--muted)]">（仮）</span></p>
+          <p class="mt-1 text-lg font-bold">小西行政書士事務所 <span class="text-xs font-normal text-[var(--muted)]">（仮）</span></p>
         </a>
         <nav class="hidden gap-6 text-sm md:flex">
           <a href={`${base}#services`}>業務内容</a>
@@ -46,7 +46,7 @@ const schema = {
     </header>
     <main><slot /></main>
     <footer class="mt-16 border-t border-[var(--line)] py-8 text-center text-xs leading-6 text-[var(--muted)]">
-      <div class="container-site">○○行政書士事務所（仮） / ○○県○○市<br />※ 本サイトは開業準備中のデモです。個人情報・連絡先は掲載していません。</div>
+      <div class="container-site">小西行政書士事務所（仮） / ○○県○○市<br />※ 本サイトは開業準備中のデモです。個人情報・連絡先は掲載していません。</div>
     </footer>
   </body>
 </html>
