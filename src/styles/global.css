@@ -24,10 +24,10 @@ summary::-webkit-details-marker { display: none; }
 
 .accordion-panel {
   overflow: hidden;
-  border: 1px solid var(--line);
-  border-radius: 1rem;
-  background: #fff;
+  border-bottom: 1px solid var(--line);
+  background: transparent;
   padding: 1.25rem;
+  padding-inline: 0;
 }
 
 .accordion-summary,
@@ -50,13 +50,11 @@ summary::-webkit-details-marker { display: none; }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 2rem;
-  height: 2rem;
-  border-radius: 9999px;
-  border: 1px solid var(--line);
-  background: var(--paper);
+  width: 1.5rem;
+  height: 1.5rem;
   color: var(--brand);
   font-weight: 700;
+  font-size: 1.25rem;
   line-height: 1;
   content: "+";
 }

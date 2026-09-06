@@ -1,11 +1,10 @@
-<section class="container-site mt-14 rounded-3xl border border-[var(--line)] bg-white px-5 py-8 sm:px-7 sm:py-10">
+<section id="contact" class="container-site mt-14 border-y border-[var(--line)] bg-white px-5 py-8 sm:px-7 sm:py-10">
   <div class="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:gap-12">
     <div>
-      <p class="text-xs font-semibold tracking-[0.18em] text-[var(--muted)]">CONTACT</p>
-      <h2 class="mt-2 text-2xl font-bold leading-tight sm:text-3xl">まずはお気軽にご相談ください</h2>
+      <h2 class="mt-0 text-2xl font-bold leading-tight sm:text-3xl">まずはお気軽にご相談ください</h2>
       <p class="mt-4 max-w-xl text-sm leading-7 text-[var(--muted)]">相談内容が行政書士の業務範囲か分からなくても大丈夫です。内容を確認のうえ、対応可否をご案内します。</p>
 
-      <div class="mt-6 rounded-2xl bg-[var(--paper)] p-4 sm:p-5">
+      <div class="mt-6 border-y border-[var(--line)] bg-[var(--paper)] p-4 sm:p-5">
         <p class="text-xs text-[var(--muted)]">お電話</p>
         <p class="mt-1 text-2xl font-bold tracking-wide">000-0000-0000</p>
         <p class="mt-1 text-xs text-[var(--muted)]">受付 9:00〜18:00 / 平日（仮）</p>
@@ -20,13 +19,13 @@
           type="text"
           required
           placeholder="山田 太郎"
-          class="min-h-12 rounded-xl border border-[var(--line)] bg-[var(--paper)] px-4 text-base font-normal outline-none transition focus:border-[var(--brand)]"
+          class="min-h-12 rounded-sm border border-[var(--line)] bg-[var(--paper)] px-4 text-base font-normal outline-none transition focus:border-[var(--brand)]"
         />
       </label>
 
       <label class="grid gap-2 text-sm font-medium">
         相談内容
-        <select name="topic" class="min-h-12 rounded-xl border border-[var(--line)] bg-[var(--paper)] px-4 text-base font-normal outline-none transition focus:border-[var(--brand)]">
+        <select name="topic" class="min-h-12 rounded-sm border border-[var(--line)] bg-[var(--paper)] px-4 text-base font-normal outline-none transition focus:border-[var(--brand)]">
           <option>相続・遺言</option>
           <option>許認可・届出</option>
           <option>会社・法人設立</option>
@@ -41,12 +40,12 @@
           required
           rows="5"
           placeholder="相談したい内容を簡単にご記入ください"
-          class="rounded-xl border border-[var(--line)] bg-[var(--paper)] px-4 py-3 text-base font-normal outline-none transition focus:border-[var(--brand)]"
+          class="rounded-sm border border-[var(--line)] bg-[var(--paper)] px-4 py-3 text-base font-normal outline-none transition focus:border-[var(--brand)]"
         ></textarea>
       </label>
 
-      <button type="submit" class="min-h-12 rounded-xl bg-[var(--brand)] px-5 font-bold text-white transition hover:opacity-90">相談内容を確認する</button>
-      <p id="inline-contact-result" aria-live="polite" class="text-sm text-[var(--muted)]">※ モックのため送信は行われません。</p>
+      <button type="submit" class="min-h-12 rounded-sm bg-[var(--brand)] px-5 font-bold text-white transition hover:opacity-90">相談内容を確認する</button>
+      <p id="inline-contact-result" aria-live="polite" class="text-sm text-[var(--muted)]">※ 送信機能は未実装</p>
     </form>
   </div>
 </section>
