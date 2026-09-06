@@ -102,7 +102,7 @@ a { color: inherit; text-underline-offset: 0.2em; }
   inset: 0;
   background:
     linear-gradient(0deg, rgba(20, 25, 22, 0.88) 0%, rgba(10, 25, 22, 0.78) 48%, rgba(20, 25, 22, 0) 78%),
-    linear-gradient(90deg, rgba(20, 25, 22, 0.78) 0%, rgba(0, 243, 97, 0.282) 100%);
+    linear-gradient(90deg, rgba(20, 25, 22, 0.78) 0%, rgba(0, 243, 97, 0.100) 100%);
   content: "";
 }
 
@@ -416,6 +416,7 @@ details[open] > .v2-faq-summary::after { content: "−"; }
   .v2-nav { display: flex; }
   .v2-mobile-cta { display: none; }
   .v2-hero-image { min-height: 36rem; }
+  .v2-hero-copy h1 { max-width: 48rem; }
   .v2-hero::after { background: linear-gradient(90deg, rgba(20, 25, 22, 0.76) 0%, rgba(20, 25, 22, 0.5) 52%, rgba(20, 25, 22, 0.18) 82%, rgba(20, 25, 22, 0) 100%); }
   .v2-hero-content { padding-block: 4rem; }
   .v2-about-intro { grid-template-columns: 12rem 1fr; }
