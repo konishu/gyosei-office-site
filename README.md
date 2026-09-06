@@ -33,6 +33,12 @@ npm run preview
 
 `https://konishu.github.io/gyosei-office-site/`
 
+デザイン案2の確認URL:
+
+`https://konishu.github.io/gyosei-office-site/v2/`
+
+現行版はルート、新しいデザイン案は `/v2/` に分けています。どちらも同じGitHub Pagesデプロイで公開されます。
+
 ## Current mock policy
 
 - 電話番号・メールアドレス: 非掲載

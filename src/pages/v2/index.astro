@@ -1,0 +1,175 @@
+---
+import V2Layout from '../../layouts/V2Layout.astro';
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
+---
+<V2Layout>
+  <section class="v2-hero">
+    <img
+      src={`${base}images/okayama_castle.webp?v=20260905-1`}
+      alt="岡山城周辺の風景"
+      class="v2-hero-image"
+    />
+    <div class="v2-hero-content">
+      <div class="v2-container v2-hero-copy">
+        <h1>難しい手続きを、<br />わかりやすく。</h1>
+        <p>相続・遺言、各種許認可、法人設立など。役所への申請や書類作成で「何から始めればいい？」と感じたときに、気軽に相談できる行政書士事務所を目指します。</p>
+        <div class="v2-hero-actions">
+          <a href="#contact" class="v2-button v2-button-primary">相談する</a>
+          <a href="#services" class="v2-button v2-button-secondary">対応業務を見る</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="v2-section v2-services">
+    <div class="v2-container">
+      <h2>こんな手続きをお手伝いします</h2>
+      <div class="v2-service-list">
+        <details class="v2-service-item" open>
+          <summary class="v2-service-summary">
+            <div class="v2-service-title">
+              <span class="v2-service-number" aria-hidden="true">01</span>
+              <div>
+                <h3>相続・遺言</h3>
+                <p>遺言書作成支援、遺産分割協議書、相続関係の書類作成など。</p>
+              </div>
+            </div>
+            <span class="v2-disclosure-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="v2-service-detail">
+            <p>ご家族の状況を整理しながら、必要書類の準備や書類作成を丁寧にサポートする想定です。</p>
+            <ul>
+              <li>遺言書作成のサポート</li>
+              <li>遺産分割協議書の作成支援</li>
+              <li>相続関係説明図など関連書類の作成</li>
+            </ul>
+            <small>※ 相続登記そのものは司法書士の業務です。必要に応じて他士業との連携を案内する想定です。</small>
+          </div>
+        </details>
+
+        <details class="v2-service-item">
+          <summary class="v2-service-summary">
+            <div class="v2-service-title">
+              <span class="v2-service-number" aria-hidden="true">02</span>
+              <div>
+                <h3>許認可・届出</h3>
+                <p>建設業、古物商など、事業に必要となる行政手続きの支援。</p>
+              </div>
+            </div>
+            <span class="v2-disclosure-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="v2-service-detail">
+            <p>事業を始める際や継続する際に必要となる許認可について、申請の流れや必要書類を分かりやすくご説明する想定です。</p>
+            <ul>
+              <li>建設業許可の申請支援</li>
+              <li>古物商許可など各種営業許可のサポート</li>
+              <li>各種届出・更新手続きの案内</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="v2-service-item">
+          <summary class="v2-service-summary">
+            <div class="v2-service-title">
+              <span class="v2-service-number" aria-hidden="true">03</span>
+              <div>
+                <h3>会社・法人設立</h3>
+                <p>定款作成など、法人設立時の書類作成・行政手続きをサポート。</p>
+              </div>
+            </div>
+            <span class="v2-disclosure-icon" aria-hidden="true"></span>
+          </summary>
+          <div class="v2-service-detail">
+            <p>これから事業を始める方に向けて、法人設立に関する必要書類や手続きの整理をお手伝いする想定です。</p>
+            <ul>
+              <li>定款作成の支援</li>
+              <li>設立前後の行政手続きの整理</li>
+              <li>事業開始時の必要書類に関するご案内</li>
+            </ul>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="v2-section v2-about">
+    <div class="v2-container v2-about-grid">
+      <div class="v2-portrait">
+        <img src={`${base}images/profile-hideki-konishi.jpg?v=20260906-1`} alt="小西秀樹のプロフィール写真" />
+      </div>
+      <div class="v2-about-copy">
+        <h2>相談しやすい行政書士を目指して</h2>
+        <p>はじめまして。行政書士の小西秀樹です。長年の社会人経験を活かし、難しく感じやすい行政手続きについて、一つひとつ丁寧にご説明することを大切にしています。</p>
+        <p class="v2-callout">「こんなことを聞いてもいいのかな」という段階でも構いません。</p>
+        <p>岡山市内や岡山駅周辺の皆さまにとって、最初に相談できる身近な窓口でありたいと考えています。</p>
+        <dl class="v2-profile">
+          <dt>行政書士</dt><dd>小西秀樹</dd>
+          <dt>所属</dt><dd>岡山県行政書士会（仮）</dd>
+          <dt>所在地</dt><dd>岡山県岡山市</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="v2-section v2-faq">
+    <div class="v2-container">
+      <h2>よくあるご質問</h2>
+      <div class="v2-faq-list">
+        <details class="v2-faq-item">
+          <summary class="v2-faq-summary">まだ依頼するか決めていなくても相談できますか？</summary>
+          <p>はい。構いません。</p>
+        </details>
+        <details class="v2-faq-item">
+          <summary class="v2-faq-summary">XXXXXを依頼できますか？</summary>
+          <p>回答回答回答</p>
+        </details>
+        <details class="v2-faq-item">
+          <summary class="v2-faq-summary">オンラインでも相談できますか？</summary>
+          <p>対応方法は開業時に決定します。Webフォーム・LINE・オンライン面談などの導入候補を想定しています。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="v2-section v2-contact">
+    <div class="v2-container v2-contact-grid">
+      <div>
+        <h2>まずはお気軽にご相談ください</h2>
+        <p class="v2-section-lead">相談内容が行政書士の業務範囲か分からなくても大丈夫です。内容を確認のうえ、対応可否をご案内します。</p>
+        <div class="v2-phone">
+          <p class="v2-phone-label">お電話でのご相談</p>
+          <p class="v2-phone-number">000-0000-0000</p>
+          <p class="v2-phone-note">受付 9:00〜18:00 / 平日（仮）</p>
+        </div>
+      </div>
+
+      <form id="v2-contact-form" class="v2-form" novalidate>
+        <label>お名前<input name="name" type="text" required placeholder="山田 太郎" /></label>
+        <label>相談内容<select name="topic"><option>相続・遺言</option><option>許認可・届出</option><option>会社・法人設立</option><option>その他</option></select></label>
+        <label>お問い合わせ内容<textarea name="message" required rows="5" placeholder="相談したい内容を簡単にご記入ください"></textarea></label>
+        <button type="submit" class="v2-button v2-button-primary">相談内容を確認する</button>
+        <p id="v2-form-result" class="v2-form-result" aria-live="polite">※ 送信機能は未実装</p>
+      </form>
+    </div>
+  </section>
+</V2Layout>
+
+<script>
+  const form = document.querySelector('#v2-contact-form');
+  const result = document.querySelector('#v2-form-result');
+
+  form?.addEventListener('submit', (event) => {
+    event.preventDefault();
+    if (!(form instanceof HTMLFormElement) || !(result instanceof HTMLElement)) return;
+
+    const data = new FormData(form);
+    const name = String(data.get('name') ?? '').trim();
+    const message = String(data.get('message') ?? '').trim();
+
+    result.textContent = name && message
+      ? `${name}様：入力内容を確認できました。本番ではこの先で安全に送信します。`
+      : 'お名前とお問い合わせ内容を入力してください。';
+  });
+</script>
