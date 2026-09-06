@@ -100,7 +100,7 @@ a { color: inherit; text-underline-offset: 0.2em; }
 .v2-hero::after {
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(20, 25, 22, 0.58) 0%, rgba(20, 25, 22, 0.3) 48%, rgba(20, 25, 22, 0) 84%);
+  background: linear-gradient(90deg, rgba(20, 25, 22, 0.78) 0%, rgba(20, 25, 22, 0.52) 100%);
   content: "";
 }
 
@@ -113,7 +113,10 @@ a { color: inherit; text-underline-offset: 0.2em; }
   padding-block: 2.5rem;
 }
 
-.v2-hero-copy { color: #fff; }
+.v2-hero-copy {
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
 .v2-hero-copy h1 {
   max-width: 34rem;
   margin: 0;
@@ -255,10 +258,18 @@ details[open] > .v2-faq-summary::after { content: "−"; }
   background: #fff;
 }
 
-.v2-about-grid,
 .v2-contact-grid {
   display: grid;
   gap: 2.5rem;
+}
+
+.v2-about-intro {
+  display: grid;
+  grid-template-columns: 8rem 1fr;
+  align-items: center;
+  gap: 1.25rem;
+  max-width: 32rem;
+  margin-top: 2rem;
 }
 
 .v2-portrait {
@@ -275,8 +286,13 @@ details[open] > .v2-faq-summary::after { content: "−"; }
   filter: saturate(0.78) contrast(0.96);
 }
 
+.v2-about-identity { border-left: 2px solid var(--v2-accent); padding-left: 1rem; }
+.v2-about-role { margin: 0; color: var(--v2-muted); font-size: 0.75rem; }
+.v2-about-name { margin: 0.25rem 0 0; font-size: 1.5rem; font-weight: 700; }
+
 .v2-about-copy p {
-  margin: 1.25rem 0 0;
+  max-width: 46rem;
+  margin: 1.75rem 0 0;
   color: var(--v2-muted);
   font-size: 0.9375rem;
   line-height: 2.1;
@@ -398,8 +414,9 @@ details[open] > .v2-faq-summary::after { content: "−"; }
   .v2-nav { display: flex; }
   .v2-mobile-cta { display: none; }
   .v2-hero-image { min-height: 36rem; }
+  .v2-hero::after { background: linear-gradient(90deg, rgba(20, 25, 22, 0.76) 0%, rgba(20, 25, 22, 0.5) 52%, rgba(20, 25, 22, 0.18) 82%, rgba(20, 25, 22, 0) 100%); }
   .v2-hero-content { padding-block: 4rem; }
-  .v2-about-grid { grid-template-columns: 0.8fr 1.2fr; align-items: center; }
+  .v2-about-intro { grid-template-columns: 12rem 1fr; }
   .v2-contact-grid { grid-template-columns: 0.85fr 1.15fr; align-items: start; }
   .v2-hero-actions { display: flex; }
   .v2-button { width: auto; }
